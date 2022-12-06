@@ -1,21 +1,26 @@
 #include <math.h>
 #include <stdio.h>
 #include <time.h>
-int main(){
+int main()
+{
     int n,i,j,isPrime;
     clock_t begin = clock();
-    n=100;
+    n=100000000;
     printf("Prime Numbers are: \n");
     printf("%d ",2);    // All prime numbers are odd except two
-    for(i=3; i<=n; i+=2){
+    for(i=3; i<=n; i+=2)
+    {
         isPrime = 1; // boolean. By default a number is prime
-        for(j=3; j<= sqrt(i); j+=2){
+        for(j=3; j<= sqrt(i); j+=2)
+        {
             if(i%j==0)
+            {
                 isPrime=0;  // isPrime=False
                 break;
+            }
         }
-        if(isPrime);
-            printf("%d " ,i);
+        //if(isPrime)
+            //printf("%d " ,i);
     }
 
     clock_t end = clock();
