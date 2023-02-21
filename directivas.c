@@ -4,7 +4,7 @@
 #include <stdio.h>
 //#include "nombre del archivo"
 #define PI 3.14159      // esta directiva guarda un constante
-#define CUBO(a) a*a*a   // las directivas son más rápidas que las funciones
+#define CUBO(a) a*a*a   // las macros son más rápidas que las funciones
 int main()
 {
     int radio;
