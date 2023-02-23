@@ -1,9 +1,11 @@
 /*
 Factorial por recursividad
+https://youtu.be/gwHbGOyjGmo
+https://www.youtube.com/playlist?list=PLpOqH6AE0tNgqknxjMAJ8bX_L1a7lnBaH
 */
 
 #include <stdio.h>
-long Factorial(long numero);   // prototipo
+long Factorial(long numero);   // prototipo de función
 
 int main()
 {
