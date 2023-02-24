@@ -5,42 +5,42 @@ Generación de un array de enteros aleatorios sin repetición
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#define TAM 5   // número de elementos del array
+#define TAM 5   // número de elementos del array, definido como una constante
 
-int yaexiste(int r, int arr[], int n);       // prototipo de función
+int exist(int r, int arr[]);       // prototipo de función
 
 int main()
 {
     srand(time(NULL));   // semilla
-    int arr[N];
+    int arr[TAM];
     int r;
 
-    for(int i=0; i<N; i++)
+    for(int i=0; i<TAM; i++)
     {
         do
         {
             r = rand() % 10;
             printf("%i ", r);
-        } while (yaexiste(r, arr, N));
+        } while (exist(r, arr[]));
         
         arr[i] = r;
     }
     printf("\n\n");
 
-    for(int i=0; i<N; i++)
-    {
-        printf("%i\n", arr[i]);
-    }
+    // for(int i=0; i<N; i++)
+    // {
+    //     printf("%i\n", arr[i]);
+    // }
 }
 
-int yaexiste(int r, int arr[N], int N)
+int exist(int r, int arr[TAM])   // si el aleatorio r ya existe en el array retorna 0 y en caso contrario retorna 0
 {
-    for(int i=0; i<N; i++)
+    for(int i=0; i<TAM; i++)
     {
         if(r==arr[i])
         {
-            return 0;
+            return 1;
         }
-        return 1;
     }
+    return 0;
 }
