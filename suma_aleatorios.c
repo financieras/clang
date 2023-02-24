@@ -1,22 +1,19 @@
 /*
 Generación de números aleatorios almacenamiento en un array y su acumulación
 */
+
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>   // para usar los aleatorios con rand
-long int random(void);
-
-void srandom(unsigned int seed);
-
-srand(time(NULL));   // Initialization, should only be called once.
 
 int main()
 {
+    srand(time(NULL));   // Initialization, should only be called once
     int suma=0;
     int arr[10];
     for(int i=0; i<10; i++)
     {
-        int r = srand() % 20;
+        int r = rand() % 10 + 1;   // enteros entre 1 y 10
         arr[i] = r;
     }
 
