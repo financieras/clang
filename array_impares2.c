@@ -4,7 +4,8 @@ int impar(int x);
 
 int main(){
     int arr[6] = {1,2,3,4,5,6};
-    
+
+
     // METODO 1: sin usar la función de verificación impar
     for(int i=0; i<6; i++){
         if(arr[i]%2){
@@ -12,8 +13,10 @@ int main(){
         }
     }
 
+
     // COMPROBACIÓN DE UN SOLO NÚMERO    
     printf("\nVeamos si 5 es impar: %i\n", impar(5));   // la función retorna 1 que equivale a True
+
 
     // METODO 2: usando la función de verificación impar
 
@@ -23,6 +26,7 @@ int main(){
         }
     }
     printf("\n");
+
     return 0;
 }
 
