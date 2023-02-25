@@ -20,6 +20,8 @@ int main(void){
 
     total = existencias * costo;
 
-    printf("\nEl producto %s tiene %d unidades y su coste unitario es de %.2f €\n", producto, existencias, costo);
-    printf("El total coste es: %.2f €\n", total);
+    printf("\nEl producto %s tiene %d unidades y su coste unitario es de %.2f €.\n", producto, existencias, costo);
+    printf("El total coste es: %.2f €.\n", total);
+
+    return 0;
 }
