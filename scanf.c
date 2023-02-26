@@ -13,8 +13,11 @@ int main(void){
 
     printf("Indique el producto: ");
     scanf("%s", producto);                        // no va con & ya que producto es un array de 15 posiciones
+                                                  // IMPORTANTE: scanf no permite leer espacios, si hay espacios usar este truco   scanf("%*c%[^\n]", producto);
+
     printf("Indique el nº de existencias: ");
     scanf("%i", &existencias);                   // va con &
+    
     printf("Indique el costo unitario: ");
     scanf("%f", &costo);                         // va con &
 

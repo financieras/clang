@@ -7,6 +7,17 @@ https://youtu.be/N_mNvTPH12o
 
 int main(){
     char frase[100];      // la variable frase es un array de chars
-    gets(frase);      // espera con el cursor parpadeando hasta que se introduce un caracter
-    puts(frase);         // imprime el caracter (solo se ha recogido el primer caractes en caso de haber escrito varios)
+    gets(frase);          // recoje una frase con varios caracteres, espacios incluidos
+    puts(frase);          // imprime la frase completa
 }
+
+
+/*
+
+gets lanza un warning en linux:
+aviso: the `gets' function is dangerous and should not be used.
+pero deja usarlo.
+
+se recomienda usar fgets
+
+*/
