@@ -22,11 +22,13 @@ int main(){
         
         arr[i] = r;
     }
-    printf("\n\n");
+    printf("\n\nSin repetición:\n");
 
     for(int i=0; i<TAM; i++){
          printf("%i\n", arr[i]);
     }
+
+    return 0;
 }
 
 
