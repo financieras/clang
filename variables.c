@@ -26,3 +26,11 @@ int main()
     printf("%.2lf\n", d);  // redondeando a 2 decimales
     return 0;
 }
+
+/*
+En printf podemos usar estos tipos:
+Entero: %d o %i
+Flotante: %f
+Caracter una Letra: %c
+Caracteres (palabra): %s 
+*/
