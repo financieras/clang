@@ -9,7 +9,7 @@ https://youtu.be/4IabpaIObzM
 int main(){
     int i = 10;
     
-    int *p;
+    int *p;     // declaramos una variable puntero, esto se hace ponendo simplement el asterisco
     p = &i;   // estas dos últimas líneas se podrían sustituir por esta única expresión: int *p = &i;
 
     system("clear");
