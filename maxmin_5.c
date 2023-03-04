@@ -1,28 +1,27 @@
-/*  Cálculo del máximo y el mínimo
-    Usando una función auxiliar llamada busca_maxmin sin return
+/*
+    Cálculo del máximo y el mínimo de un array
+    usando solo la función manin
     usando punteros
-    se imprime el máximo y el mínimo en el main  */
+*/
 
-#include <stdio.h>
+#include<stdio.h>
 
-void busca_maxmin(int*, int, int);
+int main(void){
+    int i, arr[5] = {3,4,2,9,7};
+    int min = arr[0];
+    int max = arr[0];
+    int *p;   // puntero del array
+    p = arr;
 
-int main(){
-    int a[] = {3,4,2,9,7};
-    
-    //int *min, *max;
-    busca_maxmin(int a, int max, int min);
-    //printf("\nMáximo: %d, mínimo; %d\n", *max, *min);
+    for(i=0; i<3; i++){
+      if(max <= *p)      // condition changed
+        max = *p;
+      if(min >= *p)      // here also
+        min = *p;
+        p++;
+    }
+
+    printf("Máximo: %d\n", max);
+    printf("Mínimo: %d\n", min);
     return 0;
-}
-
-void busca_maxmin(int *arr, int max, int min){
-    size_t n = sizeof(*a);
-    printf("%d", n)
-    
-    // *min = *max = a[0];
-    // for (int i=0; i < 5; i++){
-    //     if (a[i]>*max) *max=a[i];
-    //     else if (a[i]<*min) *min=a[i];
-    // }
 }
