@@ -5,20 +5,20 @@ https://youtu.be/4IabpaIObzM
 
 #include <stdio.h>
 
-void max_min(int a[], int n, int *max, int *min);
+void max_min(int *, int n, int *max, int *min);         //  diferencia 1
 
 int main(){
     int n, min, max;
     int a[] = {40,20,10,30,-8};
     n = sizeof(a) / sizeof(a[0]);
     printf("El array es de tamaño %d\n", n);
-    
+
     max_min(a, n, &max, &min);
 
     return 0;
 }
 
-void max_min(int a[], int n, int *max, int *min){
+void max_min(int *a, int n, int *max, int *min){        // diferencia 2
     int i;
     *max = *min = a[0];
     for (i=1; i<n; i++){
@@ -28,5 +28,4 @@ void max_min(int a[], int n, int *max, int *min){
             *min = a[i];
     }
     printf("Máximo: %d, Mímino: %d\n", *max, *min);
-}
 
