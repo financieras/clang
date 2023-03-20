@@ -7,10 +7,10 @@ https://youtu.be/QV_6_aKH9G8
 int main()
 {
     int x = 10;
-    int* dirX = &x;
+    int *dirX = &x;
 
     float y = 0.5;
-    float* dirY = &y;
+    float *dirY = &y;
 
     printf("x: %d\n", x);
     printf("Dirección de x: %p\n\n", dirX);
