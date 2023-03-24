@@ -1,3 +1,7 @@
+/*
+https://www.udemy.com/course/aprende-programacion-con-ejercicios-en-lenguaje-c-parte-2
+*/
+
 #include <stdio.h>
 
 #define precio 10       // constante
