@@ -4,7 +4,7 @@ https://www.udemy.com/course/aprende-programacion-con-ejercicios-en-lenguaje-c-p
 
 #include <stdio.h>
 
-#define precio 10       // constante
+#define PRECIO 10       // constante
 
 int main(void){
     float litros;
@@ -14,7 +14,7 @@ int main(void){
         //
         printf("¿Cuántos litros desea? ");
         scanf("%f", &litros);
-        printf("\nEl importe a pagar es: %.2f", litros * precio);
+        printf("\nEl importe a pagar es: %.2f", litros * PRECIO);
         printf("\n¿Desea otro cálculo? (s = si / cualquier otra palabra para finalizar): ");
         scanf("%s", &respuesta);
     }while(respuesta == 's');   // expresión booleana

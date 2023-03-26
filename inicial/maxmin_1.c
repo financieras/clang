@@ -1,4 +1,4 @@
-/*  Cálculo del máximo y el mínimo
+/*  Cálculo del máximo y el mínimo de un array con números enteros
     Usando solo la función principal */
 
 #include <stdio.h>
@@ -10,6 +10,15 @@ int main(){
     int n = 5;
     int min, max;
     min = max = a[0];
+
+    for (int i = 1; i < n; i++){
+        if (a[i] < min){
+            min = a[i];
+        }
+        if (a[i] > max){
+            max = a[i];
+        }
+    }
 
     system("clear");
     printf("\nMáximo: %d, mínimo; %d\n", max, min);

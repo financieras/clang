@@ -19,7 +19,7 @@ int main(){
 void busca_maxmin(int a[], int n){
     int min, max;
     min = max = a[0];
-    for (int i=0; i<n; i++){
+    for (int i=1; i<n; i++){
         if (a[i]>max) max=a[i];
         else if (a[i]<min) min=a[i];
     }
