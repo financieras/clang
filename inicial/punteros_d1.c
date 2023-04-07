@@ -9,7 +9,11 @@ int main(){
     int a = 20;
 
     // declaramos un puntero a una variable de tipo int
-    int *pa = &a;   // pa almacena una dirección de memoria
+    int *pa;    // declaramos un puntero. Le llamamos pa porque apunta a la variable a
+    pa = &a;    // pa almacena una dirección de memoria de a
+                // poniendo & podemos obtener la dirección de mameoria de a
+    // las dos líneas anteriores podrían ponerse como:
+    // int *pa = &a;
 
     printf("*pa = %p\n", pa);   // poniendo %p podemos impriir la dirección de memoria
 
