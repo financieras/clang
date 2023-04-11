@@ -9,7 +9,7 @@ void main(){
 
     while (res==1){
         n = rand()%11;   // aleatorios entre 0 y 10
-        printf("El número generado es: %d\n", n);
+        printf("El número aleatorio generado es: %d\n", n);
         printf("¿Desea generar otro número? (1: Si   2: No): ");
         scanf("%d", &res);
     }
