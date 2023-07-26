@@ -26,9 +26,14 @@ La visualización se hará de la manera siguiente:
 
 #define N 10
 
-int board[N][N];
-int count = 0;
+// Variables globales
+int board[N][N];        // tablero de dimensión NxN
+int count = 0;          // contador de soluciones
 
+// Función que verifica si es seguro colocar una dama en una posición
+// Comprueba que no hay otra dama en su fila o diagonales
+// No comprueba que haya otra dama en su misma columna pero esto 
+// se garantiza por la forma en que se llama a la función en 'solve'
 int is_safe(int row, int col) {
     int i, j;
     for (i = 0; i < col; i++)
@@ -43,13 +48,19 @@ int is_safe(int row, int col) {
     return 1;
 }
 
+
+// La función solve comienza con la primera columna y recursivamente intenta colocar una reina en cada fila de esa columna.
+// Si se puede colocar una reina, pasa a la siguiente columna. 
+//Si todas las reinas se colocan con éxito, imprime la solución e incrementa la variable count
+
+
 int solve(int col) {
     int i;
     if (col >= N) {
-        for (i = 0; i < N; i++) {
+        for (i = 0; i < N; i++) {           // se itera sobre las filas
             for (int j = 0; j < N; j++) {
-                if(board[i][j] == 1)
-                    printf("%d", j);
+                if(board[i][j] == 1)        // 1 representa una celda con dama
+                    printf("%d", j);        // j es la columna de una dama válida
             }
         }
         printf("$\n");
@@ -58,20 +69,20 @@ int solve(int col) {
     }
     for (i = 0; i < N; i++) {
         if (is_safe(i, col)) {
-            board[i][col] = 1;
-            solve(col + 1);
-            board[i][col] = 0; // backtrack
+            board[i][col] = 1;      // 1 representa una celda con dama
+            solve(col + 1);         // llamada recursiva para las columnas restantes
+            board[i][col] = 0;      // backtrack
         }
     }
     return 0;
 }
 
 int ft_ten_queens_puzzle(void) {
-    int i, j;
+    int i, j;                       // se inicializa el tablero de ajedrez
     for (i = 0; i < N; i++)
         for (j = 0; j < N; j++)
-            board[i][j] = 0;
-    solve(0);
+            board[i][j] = 0;        // 0 representa una celda vacía
+    solve(0);                       // se llama a la función que lo resuelve comenzando en col=0
     return count;
 }
 
